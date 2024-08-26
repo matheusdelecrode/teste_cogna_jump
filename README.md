@@ -1,13 +1,25 @@
 # Desafio de Processamento de Dados de Grande Volume
+## Pré-requisitos
 
-## Problema
+``pip install pandas``
 
-Precisamos processar um grande arquivo CSV para calcular estatísticas de vendas. O desafio é fazer isso de maneira eficiente para não sobrecarregar a memória e reduzir o tempo de execução.
+## Como Executar
+
+1. **Coloque o arquivo CSV**:
+   - Certifique-se de que o arquivo CSV com os dados de vendas está disponível no mesmo diretório onde o script será executado. O arquivo deve ser nomeado como vendas.csv.
+
+2. **Execute o Script**:
+   - Salve o código Python fornecido em um arquivo chamado main.py.
+   - Abra um terminal ou prompt de comando.
+   - Navegue até o diretório onde o main.py está localizado.
+   - Execute o script com o seguinte comando:
+   ``python main.py``
+   - O script irá processar o arquivo CSV, calcular as estatísticas de vendas e exibir os resultados no terminal.
 
 ## Solução
 
 1. **Divisão do Arquivo em Pedaços**:
-   - O arquivo CSV é dividido em pedaços menores, chamados "chunks", com 1 milhão de linhas cada. Isso evita o uso excessivo de memória.
+   - O arquivo CSV é dividido em pedaços menores, chamados "chunks". Isso evita o uso excessivo de memória.
 
 2. **Processamento Paralelo**:
    - Usamos `ProcessPoolExecutor` para processar esses pedaços em paralelo. Isso significa que vários pedaços são processados ao mesmo tempo, o que acelera o processo.
